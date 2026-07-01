@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "url": "https://images.unsplash.com/photo-1488415032361-b7e238421f1b?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHxhdXJvcmElMjBuaWdodCUyMHNreSUyMG1vdW50YWlucyUyMGNpbmVtYXRpY3xlbnwxfDB8fHwxNzgyODk0NjA3fDA&ixlib=rb-4.1.0",
+    "color": "#0c4040",
+    "blurHash": "L73dVIR7HvynMnoxySRVL%n$tRRj",
+    "alt": "snow mountain with Aurora borealis",
+    "credit": {
+      "name": "Jonatan Pie",
+      "username": "r3dmax",
+      "link": "https://unsplash.com/@r3dmax"
+    }
+  },
+  "arena": {
+    "url": "https://images.unsplash.com/photo-1679391029864-d46f366a456b?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHxzdGFkaXVtJTIwbGlnaHRzJTIwbmlnaHQlMjBkcmFtYXRpY3xlbnwxfDB8fHwxNzgyODk0NjA3fDA&ixlib=rb-4.1.0",
+    "color": "#262626",
+    "blurHash": "LB8h2f%f4UE1R9aeo_R*4Tay%gWF",
+    "alt": "a soccer stadium filled with lots of people",
+    "credit": {
+      "name": "Howard Bouchevereau",
+      "username": "howardbouchevereau",
+      "link": "https://unsplash.com/@howardbouchevereau"
+    }
+  },
+  "fire": {
+    "url": "https://images.unsplash.com/photo-1580250642511-1660fe42ad58?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHx2b2xjYW5vJTIwbGF2YSUyMGdsb3dpbmclMjBuaWdodHxlbnwxfDB8fHwxNzgyODk0NjA4fDA&ixlib=rb-4.1.0",
+    "color": "#404073",
+    "blurHash": "LU9@Yy%3S$OFt:o~sloJJVSin$wb",
+    "alt": "white clouds over snow covered mountain",
+    "credit": {
+      "name": "Alain Bonnardeaux",
+      "username": "bonnarda",
+      "link": "https://unsplash.com/@bonnarda"
+    }
+  },
+  "water": {
+    "url": "https://images.unsplash.com/photo-1549074862-6173e20d02a8?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHxkZWVwJTIwb2NlYW4lMjB3YXZlcyUyMHVuZGVyd2F0ZXIlMjBibHVlfGVufDF8MHx8fDE3ODI4OTQ2MDl8MA&ixlib=rb-4.1.0",
+    "color": "#0c2640",
+    "blurHash": "Le1$TremVEf+pyenZ$kCk=e:aKf*",
+    "alt": "photography of blue water",
+    "credit": {
+      "name": "Sarah Lee",
+      "username": "hisarahlee",
+      "link": "https://unsplash.com/@hisarahlee"
+    }
+  },
+  "grass": {
+    "url": "https://images.unsplash.com/photo-1658025216407-2d9a82eed23f?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHxsdXNoJTIwZ3JlZW4lMjBmb3Jlc3QlMjBtZWFkb3clMjBzdW5saWdodHxlbnwxfDB8fHwxNzgyODk0NjEwfDA&ixlib=rb-4.1.0",
+    "color": "#0c260c",
+    "blurHash": "LFCaY44Ws;%dMKaQM|%KS^RkRRRQ",
+    "alt": "a grassy area with trees in the back",
+    "credit": {
+      "name": "Ruiqi Kong",
+      "username": "sakamotomari",
+      "link": "https://unsplash.com/@sakamotomari"
+    }
+  },
+  "electric": {
+    "url": "https://images.unsplash.com/photo-1559087867-ce4c91325525?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHxsaWdodG5pbmclMjBzdG9ybSUyMHRodW5kZXIlMjBza3l8ZW58MXwwfHx8MTc4Mjg5NDYxMXww&ixlib=rb-4.1.0",
+    "color": "#0c4073",
+    "blurHash": "LD4:{8yEMIMwtpyZo#RORNbcx^tS",
+    "alt": "a lightning bolt is seen in the sky",
+    "credit": {
+      "name": "Michał Mancewicz",
+      "username": "kreyatif",
+      "link": "https://unsplash.com/@kreyatif"
+    }
+  },
+  "route": {
+    "url": "https://images.unsplash.com/photo-1536420100273-cabfa8e5b67a?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHx3aW5kaW5nJTIwcm9hZCUyMG1vdW50YWlucyUyMGxhbmRzY2FwZSUyMGFkdmVudHVyZXxlbnwxfDB8fHwxNzgyODk0NjEyfDA&ixlib=rb-4.1.0",
+    "color": "#262626",
+    "blurHash": "LyG9EbIAM{of_NM{M{j[tRt7RjV@",
+    "alt": "aerial photography of road",
+    "credit": {
+      "name": "Taneli Lahtinen",
+      "username": "tanelah",
+      "link": "https://unsplash.com/@tanelah"
+    }
+  },
+  "city": {
+    "url": "https://images.unsplash.com/photo-1513061379709-ef0cd1695189?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwY2l0eSUyMG5pZ2h0JTIwbmVvbiUyMHNreWxpbmV8ZW58MXwwfHx8MTc4Mjg5NDYxNHww&ixlib=rb-4.1.0",
+    "color": "#0c2626",
+    "blurHash": "L65YZ=JAQ+r?I9ado~og8^%2oMM_",
+    "alt": "aerial photography of lightened city buildings at night time",
+    "credit": {
+      "name": "Yiran Ding",
+      "username": "yiranding",
+      "link": "https://unsplash.com/@yiranding"
+    }
+  },
+  "trainer": {
+    "url": "https://images.unsplash.com/photo-1533461502717-83546f485d24?ixid=M3w5ODkxNDZ8MHwxfHNlYXJjaHwxfHxjaW5lbWF0aWMlMjBwb3J0cmFpdCUyMG5lb24lMjBsaWdodCUyMGJhY2tkcm9wfGVufDF8MXx8fDE3ODI4OTQ2MTV8MA&ixlib=rb-4.1.0",
+    "color": "#262640",
+    "blurHash": "LRBWWYv*M{TJRlxwRhNXI7s;obM{",
+    "alt": "woman wearing eyeglasses",
+    "credit": {
+      "name": "Finn Hackshaw",
+      "username": "finnhackshaw",
+      "link": "https://unsplash.com/@finnhackshaw"
+    }
+  }
+}

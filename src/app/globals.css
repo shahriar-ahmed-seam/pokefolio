@@ -1,26 +1,193 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ */
+/*  Design tokens                                                      */
+/* ------------------------------------------------------------------ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #080b16;
+  --bg-soft: #0d1120;
+  --bg-panel: #121830;
+  --ink: #eaf0ff;
+  --ink-dim: #9aa6c4;
+  --line: rgba(255, 255, 255, 0.09);
+
+  /* Default (no starter chosen) — Pokéball red + gold */
+  --accent: #e3350d;
+  --accent-2: #ffcb05;
+  --accent-ink: #ffffff;
+  --accent-glow: rgba(227, 53, 13, 0.5);
+  --type-name: "Trainer";
+}
+
+[data-type="fire"] {
+  --accent: #f0803c;
+  --accent-2: #ffd27f;
+  --accent-ink: #2a1200;
+  --accent-glow: rgba(240, 128, 60, 0.55);
+  --type-name: "Fire";
+}
+[data-type="water"] {
+  --accent: #4f86f7;
+  --accent-2: #a8ccff;
+  --accent-ink: #04122e;
+  --accent-glow: rgba(79, 134, 247, 0.55);
+  --type-name: "Water";
+}
+[data-type="grass"] {
+  --accent: #55b455;
+  --accent-2: #b7e778;
+  --accent-ink: #052610;
+  --accent-glow: rgba(85, 180, 85, 0.55);
+  --type-name: "Grass";
+}
+[data-type="electric"] {
+  --accent: #f6c915;
+  --accent-2: #fff08a;
+  --accent-ink: #241f00;
+  --accent-glow: rgba(246, 201, 21, 0.55);
+  --type-name: "Electric";
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-bg-panel: var(--bg-panel);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-line: var(--line);
+
+  --font-display: var(--font-display);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-spin-slow: spin 9s linear infinite;
+  --animate-twinkle: twinkle 3s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+* { border-color: var(--line); }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Atmospheric backdrop: type wash + Pokédex dot grid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(115% 85% at 50% -10%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 55%),
+    radial-gradient(90% 70% at 100% 100%, color-mix(in srgb, var(--accent-2) 8%, transparent), transparent 60%),
+    linear-gradient(180deg, #05070f 0%, #080b16 45%, #05070f 100%);
+  transition: background 1s ease;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(120% 90% at 50% 30%, #000 40%, transparent 80%);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: #05070f; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--accent), var(--accent-2));
+  border-radius: 999px;
+  border: 2px solid #05070f;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utilities                                                          */
+/* ------------------------------------------------------------------ */
+@utility container-x {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@utility text-pop {
+  background: linear-gradient(120deg, var(--accent-2), var(--accent) 60%, var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass {
+  background: color-mix(in srgb, var(--bg-panel) 80%, transparent);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+}
+
+@utility glow-ring {
+  box-shadow: 0 0 0 1px var(--line), 0 0 30px -8px var(--accent-glow);
+}
+
+@utility hairline {
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Keyframes                                                          */
+/* ------------------------------------------------------------------ */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes rise {
+  0% { transform: translateY(110vh) translateX(0) scale(var(--s, 1)); opacity: 0; }
+  10% { opacity: var(--o, 0.8); }
+  90% { opacity: var(--o, 0.8); }
+  100% { transform: translateY(-10vh) translateX(var(--drift, 20px)) scale(var(--s, 1)); opacity: 0; }
+}
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Reduced motion                                                     */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
