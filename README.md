@@ -11,7 +11,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-ff4d8d?logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Deploy](https://img.shields.io/badge/Deployed_on-Vercel-000?logo=vercel)](https://vercel.com)
 
-**[⚡ Live Demo → pokefolio-seam.vercel.app](https://pokefolio-seam.vercel.app)**
+**[⚡ Live Demo → pokemon-psi-ashen.vercel.app](https://pokemon-psi-ashen.vercel.app)**
 
 </div>
 

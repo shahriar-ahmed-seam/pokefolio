@@ -27,7 +27,7 @@ const body = Outfit({
   display: "swap",
 });
 
-const siteUrl = "https://pokefolio-seam.vercel.app";
+const siteUrl = "https://pokemon-psi-ashen.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
