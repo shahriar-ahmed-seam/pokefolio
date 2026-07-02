@@ -19,7 +19,7 @@
 
 ## ✨ Overview
 
-PokéFolio reimagines the developer portfolio of **Shahriar Ahmed Seam** (AI/ML Engineer &
+PokéFolio reimagines the developer portfolio of **Shahriar Ahmed Seam** ( AI/ML Engineer &
 LLM Researcher) as a Pokémon journey. Visitors **choose a starter** through the Professor's
 trial, after which the **entire site re-themes** to their type — Fire, Water, Grass or
 Electric — and the choice is remembered on their next visit.
